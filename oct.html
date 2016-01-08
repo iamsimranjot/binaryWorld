@@ -1,0 +1,108 @@
+<html>
+<style>
+input[type="text"]
+{
+font-weight:900;
+font-size:18;
+text-align:center;
+}
+</style>
+<body background="space2.gif">
+<br><br><br>
+<center>
+<script>
+function f1()
+{
+hex=new String(document.myf.st.value);
+var c=1,i=0,z=0;
+b=new Array(0,0,0,0,0,0,0,0);
+while(hex.charAt(i))
+{
+z++;
+i++;
+}
+
+if(z==2)
+{c=4;}
+i=0;
+ while (hex.charAt(i))
+    {
+        switch (hex.charAt(i))
+        { 
+        case '0':document.write("hdcg");
+           b[++c]=0;b[++c]=0,b[++c]=0;
+            break;
+        case '1':
+           b[++c]=0;b[++c]=0;b[++c]=1;
+             break;
+        case '2':
+           b[++c]=0;b[++c]=1;b[++c]=0;
+            break;
+        case '3':
+           b[++c]=0;b[++c]=1;b[++c]=1;
+            break;
+        case '4':
+           b[++c]=1;b[++c]=0;b[++c]=0;
+            break;
+        case '5':
+           b[++c]=1;b[++c]=0;b[++c]=1;
+             break;
+        case '6':
+           b[++c]=1;b[++c]=1;b[++c]=0;
+             break;
+        case '7':
+           b[++c]=1;b[++c]=1;b[++c]=1;
+            break;
+        
+       
+        }
+        i++;
+    }
+document.getElementById("a").value=b[0];
+document.getElementById("b").value=b[1];
+document.getElementById("c").value=b[2];
+document.getElementById("d").value=b[3];
+document.getElementById("e").value=b[4];
+document.getElementById("f").value=b[5];
+document.getElementById("g").value=b[6];
+document.getElementById("h").value=b[7];
+}
+</script>
+<a href="home1.html" target=_top><img src="back2.png" style="float:left;"></a>
+<form name ="myf">
+<font color=ivory size=6 face=Courier>
+Enter any one or two digit Octal Number : 
+</font> 
+<input type=text  name="st" value=" " size="30" style= "border: 5pt ridge LightSlateGray; height:50px;"> </input> <br><br>
+<input type=text id="a" value=" " size="7" style= "border: 5pt ridge LightSlateGray; height:40px;"></input>
+ 
+<input type=text id="b" value=" " size="7" style= "border: 5pt ridge LightSlateGray; height:40px;"></input>
+ 
+<input type=text id="c" value=" " size="7" style= "border: 5pt ridge LightSlateGray; height:40px;"></input>
+ 
+<input type=text id="d" value=" " size="7" style= "border: 5pt ridge LightSlateGray; height:40px;"></input>
+ 
+<input type=text id="e" value=" " size="7" style= "border: 5pt ridge LightSlateGray; height:40px;"></input>
+ 
+<input type=text id="f" value=" " size="7" style= "border: 5pt ridge LightSlateGray; height:40px;"></input>
+ 
+<input type=text id="g" value=" " size="7" style= "border: 5pt ridge LightSlateGray; height:40px;"></input>
+
+<input type=text id="h" value=" " size="7" style= "border: 5pt ridge LightSlateGray; height:40px;"></input>
+<br>
+<input type=button value="Enter" style="width: 80px;height: 40px;border: 7pt ridge LightSlateGray;" onClick=f1()  > </input>
+</form>
+<h6 style="color:ivory"> Enter your result in LCD LINE 1 column </h6>
+<p id="3"></p>
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

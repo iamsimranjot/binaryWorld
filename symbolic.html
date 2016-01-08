@@ -1,0 +1,517 @@
+<html>
+<body bgcolor=#0B615E text=ivory>
+
+<b><a name=sl><font color=#B45F04 size=6>Symbolic Logic<b></font><br>
+Boolean algebra derives its name from the mathematician George Boole. Symbolic Logic uses values, variables and operations :<br>
+
+True is represented by the value 1.<br>
+False is represented by the value 0.<br><br>
+Variables are represented by letters and can have one of two values, either 0 or 1. Operations are functions of one or more variables.
+
+AND is represented by X.Y<br>
+OR is represented by X + Y<br>
+NOT is represented by X' . Throughout this tutorial the X' form will be used and sometime !X will be used.<br>
+These basic operations can be combined to give expressions.
+Example :
+
+
+X<br>
+X.Y<br>
+W.X.Y + Z<br>
+
+
+<b><font color=#B45F04 size=6>Precedence<b></font><br>
+As with any other branch of mathematics, these operators have an order of precedence. NOT operations have the highest precedence, 
+followed by AND operations, followed by OR operations. Brackets can be used as with other forms of algebra. e.g.<br><br>
+
+ 	
+<b>X.Y + Z <b>and <b>X.(Y + Z) <b>are not the same function.
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Function Definitions<b></font><br>
+The logic operations given previously are defined as follows :<br><br>
+
+ 	 	
+
+Define f(X,Y) to be some function of the variables X and Y.<br>
+
+
+
+f(X,Y) = X.Y<br>
+
+1 if X = 1 and Y = 1<br>
+0 Otherwise<br>
+ 	 	
+
+
+f(X,Y) = X + Y<br>
+
+1 if X = 1 or Y = 1<br>
+0 Otherwise<br>
+ 	 	
+
+f(X) = X'<br>
+
+1 if X = 0<br>
+0 Otherwise<br>
+ 	 	
+<b><font color=#B45F04 size=6>Truth Tables<b></font><br>	
+Truth tables are a means of representing the results of a logic function using a table. They are constructed by defining all possible 
+combinations of the inputs to a function, and then calculating the output for each combination in turn. For the three functions we have just defined, 
+the truth tables are as follows.<br>
+
+AND<br><br>
+<img src="table 17.png" ><br><br>
+OR<br>
+<img src="table 18.png" >
+<br>
+
+NOT<br>
+<img src="table 19.png" ><br>
+Truth tables may contain as many input variables as desired<br>
+
+ 	 	
+<img src="table 20.png" ><br<<br>
+<br> <a name=sa><b><font color=#B45F04 size=6>Boolean Switching Algebras<b></font><br>
+A Boolean Switching Algebra is one which deals only with two-valued variables. Boole's general theory covers algebras which deal with variables which can hold n values.
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Axioms<b></font><br>
+Consider a set S = { 0. 1}<br>
+
+Consider two binary operations, + and . , and one unary operation, -- , that act on these elements. [S, ., +, --, 0, 1] is called a switching algebra that 
+satisfies the following axioms S<br>
+
+ 	 	
+<b><font color=#B45F04 size=6>Closure<b></font><br>
+If X  S and Y  S then X.Y  S<br>
+
+If X  S and Y  S then X+Y  S<br>
+
+<b><font color=#B45F04 size=6>Identity<b></font><br>
+ an identity 0 for + such that X + 0 = X
+
+ an identity 1 for . such that X . 1 = X
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Commutative Laws<b></font><br>	
+
+
+X + Y = Y + X
+
+X . Y = Y . X
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Distributive Laws<b></font><br>		
+ 	 	
+
+
+X.(Y + Z ) = X.Y + X.Z
+
+X + Y.Z = (X + Y) . (X + Z)
+
+<br><b><font color=#B45F04 size=6>Complement<b></font><br> 	 		
+ 	 	
+
+
+ X  S  a complement X'such that<br>
+
+X + X' = 1<br>
+
+X . X' = 0<br>
+
+The complement X' is unique.<br>
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Theorems<b></font><br> 
+ 	 	
+
+
+A number of theorems may be proved for switching algebras
+
+<br><b><font color=#B45F04 size=6>Idempotent Law<b></font><br> 
+ 	 	
+
+
+X + X = X<br>
+
+X . X = X<br>
+
+ 	 	
+<br><b><font color=#B45F04 size=6>DeMorgan's Law<b></font><br> 
+ 	 	
+
+
+(X + Y)' = X' . Y', These can be proved by the use of truth tables.<br><br>
+
+Proof of (X + Y)' = X' . Y'<br>
+
+ 	 	
+<img src="table 21.png"><br>
+<img src="table 22.png"><br>
+The two truth tables are identical, and so the two expressions are identical.<br>
+
+ 	 
+
+(X.Y) = X' + Y', <br>These can be proved by the use of truth tables.<br>
+
+
+
+Proof of (X.Y) = X' + Y'<br>
+
+ 	 	
+<img src="table 23.png"><br><br><br>
+<img src="table 24.png"><br>
+
+Note : DeMorgans Laws are applicable for any number of variables.
+
+<b><font color=#B45F04 size=6> Boundedness Law<b></font><br>
+ 	 	
+
+
+X + 1 = 1<br>
+
+X . 0 = 0<br>
+
+ 	 	
+<b><font color=#B45F04 size=6>Absorption Law<b></font><br> 
+ 	 	
+
+
+X + (X . Y) = X
+
+X . (X + Y ) = X
+
+ 	 	
+
+X + (X' . Y) = X + Y
+
+X.(X' + Y) = X.Y
+
+ 	 	
+
+
+If X + Y = 1 and X.Y = 0 then X = Y'
+
+ 	 	
+
+X'' = X
+
+0' = 1
+
+ 	 	
+
+
+X + (Y + Z) = (X + Y) + Z
+
+X . ( Y . Z ) = ( X . Y ) . Z
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Duality Principle<b></font><br> 
+In Boolean algebras the duality Principle can be is obtained by interchanging AND and OR operators and replacing 0's by 1's and 1's by 0's. Compare the identities on the left side with the identities on the right.
+
+ 	 	
+
+
+Example<br>
+
+ 	 	
+
+
+X.Y+Z' = (X'+Y').Z
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Consensus theorem<b></font><br> 	
+
+X.Y + X'.Z + Y.Z = X.Y + X'.Z
+
+or dual form as below
+
+(X + Y).(X' + Z).(Y + Z) = (X + Y).(X' + Z)<br>
+
+ 	 	
+
+
+Proof of X.Y + X'.Z + Y.Z = X.Y + X'.Z:<br>
+
+ <img src="table 25.png">	 	
+
+
+X.Y + X'.Z + Y.Z
+
+= X.Y + X'.Z
+
+X.Y + X'.Z + (X+X').Y.Z
+
+= X.Y + X'.Z
+
+X.Y.(1+Z) + X'.Z.(1+Y)
+
+= X.Y + X'.Z
+
+X.Y + X'.Z
+
+= X.Y + X'.Z
+
+ 	 	
+
+
+(X.Y'+Z).(X+Y).Z = X.Z+Y.Z instead of X.Z+Y'.Z
+
+X.Y'Z+X.Z+Y.Z
+
+(X.Y'+X+Y).Z
+
+(X+Y).Z
+
+X.Z+Y.Z
+
+ 	 	
+
+The term which is left out is called the consensus term.
+
+ 	 	
+
+
+Given a pair of terms for which a variable appears in one term, and its complement in the other, then the consensus term is formed by ANDing the original terms together, leaving out the selected variable and its complement.
+
+
+
+Example :
+
+The consensus of X.Y and X'.Z is Y.Z
+
+ 	 	
+
+The consensus of X.Y.Z and Y'.Z'.W' is (X.Z).(Z.W')
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Shannon Expansion Theorem<b></font><br>
+The Shannon Expansion Theorem is used to expand a Boolean logic function (F) in terms of (or with respect to) a Boolean variable (X), as in the following forms.
+
+
+
+F = X . F (X = 1) + X' . F (X = 0)
+
+ 	 	
+
+
+where F (X = 1) represents the function F evaluated with X set equal to 1; F (X = 0) represents the function F evaluated with X set equal to 0.
+
+ 	 	
+
+
+Also the following function F can be expanded with respect to X,
+
+
+
+Thus, the function F can be split into two smaller functions.
+
+ 
+
+ 	 	
+
+
+This is known as the cofactor of F with respect to X in the previous logic equation. The cofactor of F with respect to X may also be represented as F X
+ (the cofactor of F with respect to X' is F X' ). Using the Shannon Expansion Theorem, a Boolean function may be expanded with respect to any of its 
+variables. For example, if we expand F with respect to Y instead of X,
+
+ 	 	
+
+
+
+
+A function may be expanded as many times as the number of variables it contains until the canonical form is reached. The canonical form is a unique
+ representation for any Boolean function that uses only minterms. A minterm is a product term that contains all the variables of F such as X . Y' . Z).
+
+
+
+Any Boolean function can be implemented using multiplexer blocks by representing it as a series of terms derived using the Shannon Expansion Theorem.<br>
+
+ 
+
+ 	 	
+
+
+<br><b><font color=#B45F04 size=6>Summary<b></font><br>
+<img src="table 26.png">
+
+<br><a name=am><b><font color=#B45F04 size=6>Algebraic Manipulation<b></font><br><br><br>
+<br><b><font color=#B45F04 size=6>Minterms and Maxterms<b></font><br>
+
+ 	 	
+
+
+Any boolean expression may be expressed in terms of either minterms or maxterms. To do this we must first define the concept of a literal.
+ A literal is a single variable within a term which may or may not be complemented. For an expression with N variables, 
+minterms and maxterms are defined as follows :
+
+A minterm is the product of N distinct literals where each literal occurs exactly once.
+A maxterm is the sum of N distinct literals where each literal occurs exactly once.
+For a two-variable expression, the minterms and maxterms are as follows
+<img src="table 27.png"><br><br>
+
+
+
+For a three-variable expression, the minterms and maxterms are as follows<br>
+<img src="table 28.png"><br><br>
+
+
+
+
+This allows us to represent expressions in either Sum of Products or Product of Sums forms<br>
+
+<br><b><font color=#B45F04 size=6>Sum Of Products (SOP)<b></font><br> 
+ 	 	
+
+
+The Sum of Products form represents an expression as a sum of minterms.
+
+ 	 	
+
+
+F(X, Y, ...) = Sum (ak.mk)
+
+ 	 
+where ak is 0 or 1 and mk is a minterm.
+
+
+
+To derive the Sum of Products form from a truth table, OR together all of the minterms which give a value of 1.
+
+<br><b><font color=#B45F04 size=6>Example - SOP<b></font><br> 	
+
+Consider the truth table<br><br>
+<img src="table 29.png"><br>
+
+ 	 	
+
+Here SOP is f(X.Y) = X.Y' + X.Y
+
+ <br><b><font color=#B45F04 size=6>Product of Sums(POS)<b></font><br> 	
+	 	
+
+The Product of Sums form represents an expression as a product of maxterms.<br>
+
+ 	 	
+
+
+F(X, Y, .......) = Product (bk + Mk), where bk is 0 or 1 and Mk is a maxterm.<br>
+
+
+
+To derive the Product of Sums form from a truth table, AND together all of the maxterms which give a value of 0.<br>
+<br><b><font color=#B45F04 size=6> Example - POS<b></font><br>
+
+
+Consider the truth table from the previous example.<br>
+<img src="table 30.png"><br>
+
+ 	 	
+
+Here POS is F(X,Y) = (X+Y')
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Exercise<b></font><br>
+ 	 	
+
+
+Give the expression represented by the following truth table in both Sum of Products and Product of Sums forms.<br><br>
+
+ <img src="table 31.png"><br>	 	
+
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Conversion between POS and SOP<b></font><br>	
+Conversion between the two forms is done by application of DeMorgans Laws.
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Simplification<b></font><br>		
+As with any other form of algebra you have encountered, simplification of expressions can be performed with Boolean algebra.
+
+<br><b><font color=#B45F04 size=6>Example<b></font><br>	
+
+Show that X.Y.Z' + X'.Y.Z' + Y.Z = Y
+
+ 	 	
+
+
+X.Y.Z' + X'.Y.Z' + Y.Z = Y.Z' + Y.Z = Y
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Example<b></font><br>	
+
+Show that (X.Y' + Z).(X + Y).Z = X.Z + Y.Z
+
+ 	 	
+
+(X.Y' + Z).(X + Y).Z
+
+= (X.Y' + Z.X + Y'.Z).Z
+
+= X.Y'Z + Z.X + Y'.Z
+
+= Z.(X.Y' + X + Y')
+
+= Z.(X+Y')
+<br>
+
+<br><b><font color=#B45F04 size=6>Logic Circuits<b></font><br>	
+
+
+ 	 	
+Boolean algebra is ideal for expressing the behavior of logic circuits.<br>
+
+A circuit can be expressed as a logic design and implemented as a collection of individual connected logic gates.<br>
+
+
+<br><b><font color=#B45F04 size=6>Fixed Logic Systems<b></font><br>	
+A fixed logic system has two possible choices for representing true and false.
+
+ 	 	
+
+<br><b><font color=#B45F04 size=6>Positive Logic<b></font><br>	
+In a positive logic system, a high voltage is used to represent logical true (1), and a low voltage for a logical false (0).
+
+
+<br><b><font color=#B45F04 size=6>Negative Logic<b></font><br>	
+In a negative logic system, a low voltage is used to represent logical true (1), and a high voltage for a logical false (0).
+
+ 	 	
+
+In positive logic circuits it is normal to use +5V for true and 0V for false.
+
+
+<br><b><font color=#B45F04 size=6>Switching Circuits<b></font><br>		
+The abstract logic described previously can be implemented as an actual circuit. Switches are left open for logic 0 and closed for logic 1.
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Two variable AND circuit X.Y<b></font><br>
+ <img src="boolea_0.gif"><br>
+<br><b><font color=#B45F04 size=6>Two variable OR circuit X + Y<b></font><br>
+ <img src="boolea_2.gif"><br>	 	
+<br><b><font color=#B45F04 size=6>Four variable circuit U.V.(X + Y)<b></font><br>
+ <img src="boolea7.gif"><br>	
+
+	
+ 	 	
+
+<br><b><font color=#B45F04 size=6>Truth Table<b></font><br>		
+A truth table is a means for describing how a logic circuit's output depends on the logic levels present at the circuit's inputs.
+
+
+
+In the following twos-inputs logic circuit, the table lists all possible combinations of logic levels present at inputs X and Y along with the corresponding output level F.<br><br>
+<img src="port.gif"><br><br>
+<img src="table 32.png"><br><br>
+
+
+ 	 	
+
+
+When either input X AND Y is 1, the output F is 1. Therefore the "?" in the box is an AND gate.
+
+ 	 	
+
+</body>
+</html>

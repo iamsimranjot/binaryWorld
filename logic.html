@@ -1,0 +1,304 @@
+<html>
+<body bgcolor=#0B615E text=ivory>
+
+<br><a name=lg><b><font color=#B45F04 size=6>Logic  Gates<b></font><br>
+
+A logic gate is an electronic circuit/device which makes the logical decisions. To arrive at this decisions, the most common logic gates used are OR, AND, NOT, NAND, and NOR gates. The NAND and NOR gates are called universal gates. The exclusive-OR gate is another logic gate which can be constructed using AND, OR and NOT gate.
+
+ 	 	
+
+
+Logic gates have one or more inputs and only one output. The output is active only for certain input combinations. Logic gates are the building blocks of any digital circuit. Logic gates are also called switches. With the advent of integrated circuits, switches have been replaced by TTL (Transistor Transistor Logic) circuits and CMOS circuits. Here I give example circuits on how to construct simples gates.
+
+<br><b><font color=#B45F04 size=6>Symbolic Logic<b></font><br>
+
+Boolean algebra derives its name from the mathematician George Boole. Symbolic Logic uses values, variables and operations.
+
+ 	 	
+
+<br><b><font color=#B45F04 size=6>Inversion<b></font><br>	
+
+A small circle on an input or an output indicates inversion. See the NOT, NAND and NOR gates given below for examples.<br>
+<img src="not.gif"><br>
+ 	 	
+<br><b><font color=#B45F04 size=6>Multiple Input Gates<b></font><br>		
+Given commutative and associative laws, many logic gates can be implemented with more than two inputs, and for reasons of space in circuits, usually multiple input, complex gates are made. You will encounter such gates in real world (maybe you could analyze an ASIC lib to find this).
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Gates Types<b></font><br>		
+ 	 	
+
+
+AND
+OR
+NOT
+BUF
+NAND
+NOR
+XOR
+XNOR
+ 	 	
+<br><b><font color=#B45F04 size=6>AND Gate<b></font><br>
+The AND gate performs logical multiplication, commonly known as AND function. The AND gate has two or more inputs and single output. The output of AND gate is HIGH only when all its inputs are HIGH (i.e. even if one input is LOW, Output will be LOW).
+
+
+
+If X and Y are two inputs, then output F can be represented mathematically as F = X.Y, Here dot (.) denotes the AND operation. Truth table and symbol of the AND gate is shown in the figure below.
+
+
+<br>
+Symbol
+<img src="boolea_5.gif"><br>
+
+<br>
+Truth Table
+<br><img src="table 33.png"><br>
+ 	 	
+
+
+Two input AND gate using "diode-resistor" logic is shown in figure below, where X, Y are inputs and F is the output.
+
+ 	 	
+
+
+<br><b>Circuit<b><br>
+<src="gates_and_2rtl.gif">
+
+.
+If X = 0 and Y = 0, then both diodes D1 and D2 are forward biased and thus both diodes conduct and pull F low.
+
+ 	 	
+
+
+If X = 0 and Y = 1, D2 is reverse biased, thus does not conduct. But D1 is forward biased, thus conducts and thus pulls F low.
+
+ 	 	
+
+
+If X = 1 and Y = 0, D1 is reverse biased, thus does not conduct. But D2 is forward biased, thus conducts and thus pulls F low.
+
+ 	 	
+
+
+If X = 1 and Y = 1, then both diodes D1 and D2 are reverse biased and thus both the diodes are in cut-off and thus there is no drop in voltage at F. Thus F is HIGH.
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Switch Representation of AND Gate<b></font><br>	
+In the figure below, X and Y are two switches which have been connected in series (or just cascaded) with the load LED and source battery. When both switches are closed, current flows to LED.
+<br><br><img src="boolea_0.gif">
+ 	 	
+<br><b><font color=#B45F04 size=6>Three Input AND gate<b></font><br>	
+Since we have already seen how a AND gate works and I will just list the truth table of a 3 input AND gate. The figure below shows its symbol and truth table.
+
+
+
+<b>Circuit<b><br>
+<img src="gate_3and.gif"><br>
+
+<b>Truth Table<b>
+<br><img src="table 34.png"><br>
+
+<br>
+ 	<b><font color=#B45F04 size=6>OR Gate<b></font><br>
+The OR gate performs logical addition, commonly known as OR function. The OR gate has two or more inputs and single output. The output of OR gate is HIGH only when any one of its inputs are HIGH (i.e. even if one input is HIGH, Output will be HIGH).
+
+ 	 	
+
+
+If X and Y are two inputs, then output F can be represented mathematically as F = X+Y. Here plus sign (+) denotes the OR operation. Truth table and symbol of the OR gate is shown in the figure below.
+
+ 	 	
+
+<br>
+Symbol
+<br>
+<img src="gate_or.gif"><br>
+	 	
+
+
+Truth Table
+<br>
+<img src="table 35.png"><br>
+
+
+Two input OR gate using "diode-resistor" logic is shown in figure below, where X, Y are inputs and F is the output.
+
+
+<br>
+Circuit
+<br>
+<img src="gates_or_rtl.gif"><br>
+
+
+.
+
+
+If X = 0 and Y = 0, then both diodes D1 and D2 are reverse biased and thus both the diodes are in cut-off and thus F is low.
+
+
+If X = 0 and Y = 1, D1 is reverse biased, thus does not conduct. But D2 is forward biased, thus conducts and thus pulling F to HIGH.
+
+ 	 	
+
+
+If X = 1 and Y = 0, D2 is reverse biased, thus does not conduct. But D1 is forward biased, thus conducts and thus pulling F to HIGH.
+
+ 	 	
+
+
+If X = 1 and Y = 1, then both diodes D1 and D2 are forward biased and thus both the diodes conduct and thus F is HIGH.
+
+ 	 	
+
+
+ <br><b><font color=#B45F04 size=6>Switch Representation of OR Gate<b></font><br>
+In the figure, X and Y are two switches which have been connected in parallel, and this is connected in series with the load LED and source battery. When both switches are open, current does not flow to LED, but when any switch is closed then current flows.
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Three Input OR gate<b></font><br>
+Since we have already seen how an OR gate works, I will just list the truth table of a 3-input OR gate. The figure below shows its circuit and truth table.
+
+
+
+<b>Truth Table<b>
+
+<br>
+<img src="table 36.png">
+
+
+
+ 	 	
+<br><a name=ug><b><font color=#B45F04 size=6>Universal Gates<b></font><br>
+Universal gates are the ones which can be used for implementing any gate like AND, OR and NOT,
+ or any combination of these basic gates; NAND and NOR gates are universal gates. But there are some rules 
+that need to be followed when implementing NAND or NOR based gates.
+
+To facilitate the conversion to NAND and NOR logic, we have two new graphic symbols for these gates.
+<b>NAND<b>
+<br><img src="gates_nand_unv.gif"><br>
+<b>NOR<b>
+<br><img src="gates_nor_unv.gif"><br>
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Realization of logic function using NAND gates<b></font><br>
+Any logic function can be implemented using NAND gates. To achieve this, first the logic function has to be written in Sum of Product (SOP) form.
+ Once logic function is converted to SOP, then is very easy to implement using NAND gate. In other words any logic circuit with AND gates in first
+ level and OR gates in second level can be converted into a NAND-NAND gate circuit.
+
+ 	 	
+
+
+Consider the following SOP expression
+
+ 	 	
+
+
+F = W.X.Y + X.Y.Z + Y.Z.W
+
+ 	 	
+
+
+The above expression can be implemented with three AND gates in first stage and one OR gate in second stage as shown in figure.
+
+<br><img src="gates_sop.gif"><br>
+
+
+
+
+
+If bubbles are introduced at AND gates output and OR gates inputs (the same for NOR gates), the above circuit becomes as shown in figure.
+<br><img src="gates_sop2.gif"><br>
+
+Now replace OR gate with input bubble with the NAND gate. Now we have circuit which is fully implemented with just NAND gates.
+<br><img src="gates_sop3.gif"><br>
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Realization of logic gates using NAND gates<b></font><br>
+ 	 	
+<br><b><font color=#B45F04 size=6>Implementing an inverter using NAND gate<b></font><br>
+ <br><img src="table 37.png"><br>
+<br><img src="gates_not_unv.gif"><br>
+	 	
+
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Implementing AND using NAND gates<b></font><br>	
+<br><img src="table 38.png"><br>
+<br><img src="gates_and_unv.gif"><br>
+ 	 	
+ 	 	
+<br><b><font color=#B45F04 size=6>Implementing OR using NAND gates<b></font><br>	
+<br><img src="table 39.png"><br>
+<br><img src="gates_or_unv.gif"><br>
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Implementing NOR using NAND gatese<b></font><br>	
+<br><img src="table 40.png"><br>
+<br><img src="gates_nor_unv.gif"><br>
+
+ 	 	
+ 	 	
+<br><b><font color=#B45F04 size=6>	Realization of logic function using NOR gates<b></font><br>	
+Any logic function can be implemented using NOR gates. To achieve this, first the logic function has to be written in 
+Product of Sum (POS) form. Once it is converted to POS, then it's very easy to implement using NOR gate. In other words any
+ logic circuit with OR gates in first level and AND gates in second level can be converted into a NOR-NOR gate circuit.
+
+ 	 	
+
+
+Consider the following POS expression
+
+ 	 	
+
+
+F = (X+Y) . (Y+Z)
+
+ 	 	
+
+
+The above expression can be implemented with three OR gates in first stage and one AND gate in second stage as shown in figure.
+<br><img src="gates_pos1.gif"><br>
+ 	 	
+
+
+If bubble are introduced at the output of the OR gates and the inputs of AND gate, the above circuit becomes as shown in figure.
+<br><img src="gates_pos2.gif"><br>
+ 	 	
+
+
+Now replace AND gate with input bubble with the NOR gate. Now we have circuit which is fully implemented with just NOR gates.
+<br><img src="gates_pos3.gif"><br>
+ 	 	
+ 	 	
+<br><b><font color=#B45F04 size=6>Realization of logic gates using NOR gates<b></font><br>	
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Implementing an inverter using NOR gate<b></font><br>	
+ <br><img src="table 41.png"><br>
+
+<br><img src="gates_not_nor.gif"><br>	
+ 	 	
+<br><b><font color=#B45F04 size=6>Implementing AND using NOR gates<b></font><br>	
+  <br><img src="table 42.png"><br>
+<br><img src="gates_and_nor.gif"><br>		 	
+ 	 	
+<br><b><font color=#B45F04 size=6>Implementing OR using NOR gates<b></font><br>	
+ <br><img src="table 43.png"><br>
+<br><img src="gates_or_nor.gif"><br>	 	
+ 	 	
+<br><b><font color=#B45F04 size=6>Implementing NAND using NOR gates<b></font><br>
+ 	 	
+<br><img src="table 44.png"><br>
+<br><img src="gates_nand_nor.gif"><br>
+
+ 	 	
+
+
+ 	 	
+
+
+
+ 	 	
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+<body background="space2.gif">
+<form name ="myf">
+<font color=ivory size=6 face=Courier>
+Enter any decimal number : 
+</font> 
+<input type=text name="st" value=" " size="60" style= "border: 5pt ridge LightSlateGray; height:60px;></input>
+ <br><br><br><br>
+<input type=text name="1" value=" " size="60" style= "border: 5pt ridge LightSlateGray; height:60px;></input>
+ 
+<input type=text name="2" value=" " size="60" style= "border: 5pt ridge LightSlateGray; height:60px;></input>
+ 
+<input type=text name="3" value=" " size="60" style= "border: 5pt ridge LightSlateGray; height:60px;></input>
+ 
+<input type=text name="4" value=" " size="60" style= "border: 5pt ridge LightSlateGray; height:60px;></input>
+ 
+<input type=text name="5" value=" " size="60" style= "border: 5pt ridge LightSlateGray; height:60px;></input>
+ 
+<input type=text name="6" value=" " size="60" style= "border: 5pt ridge LightSlateGray; height:60px;></input>
+ 
+<input type=text name="7" value=" " size="60" style= "border: 5pt ridge LightSlateGray; height:60px;></input>
+
+<input type=text name="8" value=" " size="60" style= "border: 5pt ridge LightSlateGray; height:60px;></input>
+
+
+<input type=button value="Enter" style="width: 100px;height: 60px;border: 7pt ridge LightSlateGray;" onClick=f1()> </input><br><br><br><br>
+
+</form>
+<p id="3"></p>
+<script>
+function f1()
+{
+var num=parseInt(document.myf.st.value);
+
+arr=new Array(0,0,0,0,0,0,0,0);
+for(var i=7;i>=0;i--)
+{
+arr[i]=parseInt(num%2);
+num=num/2;
+}
+
+document.myf.i.value=arr[0];
+
+
+}
+</script>
+</html>

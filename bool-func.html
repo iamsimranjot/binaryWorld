@@ -1,0 +1,363 @@
+<html>
+<body bgcolor=#0B615E text=ivory>
+
+
+<br><b><font color=#B45F04 size=6>Introduction<b></font><br>
+Simplification of Boolean functions is mainly used to reduce the gate count of a design. 
+Less number of gates means less power consumption, sometimes the circuit works faster and
+ also when number of gates is reduced, cost also comes down.
+
+ 	 	
+
+
+There are many ways to simplify a logic design, some of them are given below. We will be 
+looking at each of these in detail in the next few pages.
+
+Algebraic Simplification.
+Simplify symbolically using theorems/postulates.
+Requires good skills
+Karnaugh Maps.
+Diagrammatic technique using 'Venn-like diagram'.
+Limited to no more than 6 variables.
+We have already seen how Algebraic Simplification works, so lets concentrate on Karnaugh Maps 
+or simply k-maps.
+
+ 	 	
+
+
+
+ 
+ 	 	
+<br><a name=k><b><font color=#B45F04 size=6>Karnaugh Maps<b></font><br>
+Karnaugh maps provide a systematic method to obtain simplified sum-of-products (SOPs) Boolean 
+expressions. This is a compact way of representing a truth table and is a technique that is used
+ to simplify logic expressions. It is ideally suited for four or less variables, becoming cumbersome
+ for five or more variables. Each square represents either a minterm or maxterm. A K-map of n variables
+
+ will have 2
+
+squares. For a Boolean expression, product terms are denoted by 1's, while sum terms are denoted by
+ 0's - but 0's are often left blank.
+
+ 	 	
+
+
+A K-map consists of a grid of squares, each square representing one canonical minterm combination
+ of the variables or their inverse. The map is arranged so that squares representing minterms which
+ differ by only one variable are adjacent both vertically and horizontally. Therefore XY'Z' would be
+ adjacent to X'Y'Z' and would also adjacent to XY'Z and XYZ'.
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Minimization Technique<b></font><br>
+Based on the Unifying Theorem: X + X' = 1
+The expression to be minimized should generally be in sum-of-product form (If necessary, 
+the conversion process is applied to create the sum-of-product form).
+The function is mapped onto the K-map by marking a 1 in those squares corresponding to the 
+terms in the expression to be simplified (The other squares may be filled with 0's).
+Pairs of 1's on the map which are adjacent are combined using the theorem Y(X+X') = Y where 
+Y is any Boolean expression (If two pairs are also adjacent, then these can also be combined 
+using the same theorem).
+The minimization procedure consists of recognizing those pairs and multiple pairs.
+These are circled indicating reduced terms.
+Groups which can be circled are those which have two (21) 1's, four (22) 1's, eight (23) 1's,
+ and so on.
+Note that because squares on one edge of the map are considered adjacent to those on the opposite edge,
+ group can be formed with these squares.
+Groups are allowed to overlap.
+The objective is to cover all the 1's on the map in the fewest number of groups and to create the
+ largest groups to do this.
+Once all possible groups have been formed, the corresponding terms are identified.
+A group of two 1's eliminates one variable from the original minterm.
+A group of four 1's eliminates two variables from the original minterm.
+A group of eight 1's eliminates three variables from the original minterm, and so on.
+The variables eliminated are those which are different in the original minterms of the group.
+
+
+<br><b><font color=#B45F04 size=6>2-Variable K-Map<b></font><br>
+In any K-Map, each square represents a minterm. Adjacent squares always differ by just one literal
+ (So that the unifying theorem may apply: X + X' = 1). For the 2-variable case (e.g.: variables X, Y),
+ the map can be drawn as below. Two variable map is the one which has got only two variables as input.
+
+<br><br> <img src="kmaps_2var.gif"><br><br>	 	
+
+
+ 		Equivalent labeling
+K-map needs not follow the ordering as shown in the figure above. What this means is that we can 
+change the position of m0, m1, m2, m3 of the above figure as shown in the two figures below.
+
+ 	 
+
+Position assignment is the same as the default k-maps positions. This is the one which we will be 
+using throughout this tutorial.
+
+ 	 	
+<br><br> <img src="kmaps_eq_1.gif">	<br><br>
+	 	
+
+
+This figure is with changed position of m0, m1, m2, m3.
+
+ 	 	
+<br><br> <img src="kmaps_eq_2.gif">	<br><br>
+
+The K-map for a function is specified by putting a '1' in the square corresponding to a minterm,
+ a '0' otherwise.
+
+ 	 	
+	Example- Carry and Sum of a half adder
+In this example we have the truth table as input, and we have two output functions. Generally we
+ may have n output functions for m input variables. Since we have two output functions, we need to
+ draw two k-maps (i.e. one for each function). Truth table of 1 bit adder is shown below. Draw the
+ k-map for Carry and Sum as shown below.
+
+ <br><br> <img src="50.png"><br><br>
+		 	
+ <br><br> <img src="kmaps_1bit_adder_map.gif"><br><br>
+
+
+
+ 	 	
+
+ 	 	
+<br><b><font color=#B45F04 size=6>Grouping/Circling K-maps<b></font><br>
+The power of K-maps is in minimizing the terms, K-maps can be minimized with the help of grouping
+ the terms to form single terms. When forming groups of squares, observe/consider the following:
+
+
+
+Every square containing 1 must be considered at least once.<br>
+A square containing 1 can be included in as many groups as desired.<br>
+A group must be as large as possible.<br>
+
+<br><br><img src="kmaps_rules.gif"><br><br>
+ 	 	
+
+
+If a square containing 1 cannot be placed in a group, then leave it out to include in final expression
+.<br>
+The number of squares in a group must be equal to 2
+, i.e. 2,4,8,.<br>
+The map is considered to be folded or spherical, therefore squares at the end of a row or column
+ are treated as adjacent squares.<br>
+The simplified logic expression obtained from a K-map is not always unique. Groupings can be made
+ in different ways.<br>
+Before drawing a K-map the logic expression must be in canonical form.<br>
+ 	 	
+
+ 	<br> <br><img src="kmaps_rules1.gif"><br><br>	
+<br><br><img src="kmaps_rules2.gif"><br><br>
+
+In the next few pages we will see some examples on grouping.
+
+ 	 	
+
+
+
+ 
+ 	 	
+
+
+ 	Example of invalid groups
+
+<br><br><img src="kmaps_invalid_groups.gif"><br><br>
+	Example - X'Y+XY
+In this example we have the equation as input, and we have one output function. Draw the k-map for
+ function F with marking 1 for X'Y and XY position. Now combine two 1's as shown in figure to form 
+the single term. As you can see X and X' get canceled and only Y remains.
+
+ 	 	
+
+
+F = Y
+
+ <br><br><img src="kmaps_2var_equ1.gif"><br><br>	 	
+
+
+ 		Example - X'Y+XY+XY'
+In this example we have the equation as input, and we have one output function. Draw the k-map for
+ function F with marking 1 for X'Y, XY and XY position. Now combine two 1's as shown in figure to 
+form the two single terms.
+
+ 	 	
+
+
+F = X + Y
+ <br><br><img src="kmaps_2var_2com.gif"><br><br>
+ 	 	
+<br><b><font color=#B45F04 size=6>3-Variable K-Map<b></font><br>
+There are 8 minterms for 3 variables (X, Y, Z). Therefore, there are 8 cells in a 3-variable K-map.
+ One important thing to note is that K-maps follow the gray code sequence, not the binary one.
+
+	
+
+ <br><br><img src=" kmaps_3var.gif"><br><br>
+
+Using gray code arrangement ensures that minterms of adjacent cells differ by only ONE literal.
+ (Other arrangements which satisfy this criterion may also be used.)
+
+ 	 	
+
+
+Each cell in a 3-variable K-map has 3 adjacent neighbours. In general, each cell in an n-variable
+ K-map has n adjacent neighbours.
+
+ 	 	
+
+
+ <br><br><img src="kmaps_3var_gray.gif"><br><br>
+There is wrap-around in the K-map
+
+X'Y'Z' (m0) is adjacent to X'YZ' (m2)
+XY'Z' (m4) is adjacent to XYZ' (m6)
+ 	 	
+ <br><br><img src="kmaps_3var_wrap.gif"><br><br>
+
+
+ 		Example
+F = XYZ'+XYZ+X'YZ
+
+ 	 	
+
+
+ <br><br><img src="kmaps_3var_exm.gif"><br><br>
+ 	 	
+
+
+F = XY + YZ
+
+ 	 	
+
+
+ 
+F(X,Y,Z) = (1,3,4,5,6,7)
+
+ 	
+ <br><br><img src="kmaps_3var_exm2.gif"> <br><br>	
+
+
+
+
+F = X + Z<br><br>
+<br><a name=q><b><font color=#B45F04 size=6>QUINE-McCLUSKEY MINIMIZATION<b></font><br>
+Quine-McCluskey minimization method uses the same theorem to produce the solution as the
+ K-map method, namely X(Y+Y')=X
+
+ 	 	
+
+<br><b><font color=#B45F04 size=6>
+ Minimization Technique<b></font><br>
+
+The expression is represented in the canonical SOP form if not already in that form.
+The function is converted into numeric notation.
+The numbers are converted into binary form.
+The minterms are arranged in a column divided into groups.
+Begin with the minimization procedure.
+Each minterm of one group is compared with each minterm in the group immediately below.
+Each time a number is found in one group which is the same as a number in the group below except
+ for one digit, the numbers pair is ticked and a new composite is created.
+This composite number has the same number of digits as the numbers in the pair except the digit
+ different which is replaced by an "x".
+The above procedure is repeated on the second column to generate a third column.
+The next step is to identify the essential prime implicants, which can be done using a prime 
+implicant chart.
+Where a prime implicant covers a minterm, the intersection of the corresponding row and column
+ is marked with a cross.
+Those columns with only one cross identify the essential prime implicants. -> These prime 
+implicants must be in the final answer.
+The single crosses on a column are circled and all the crosses on the same row are also circled,
+ indicating that these crosses are covered by the prime implicants selected.
+Once one cross on a column is circled, all the crosses on that column can be circled since the
+ minterm is now covered.
+If any non-essential prime implicant has all its crosses circled, the prime implicant is redundant
+ and need not be considered further.
+Next, a selection must be made from the remaining nonessential prime implicants, by considering how
+ the non-circled crosses can be covered best.
+One generally would take those prime implicants which cover the greatest number of crosses on their
+ row.
+If all the crosses in one row also occur on another row which includes further crosses, then the latter is said to dominate the former and can be selected.
+The dominated prime implicant can then be deleted.
+ 	 	
+	Example
+Find the minimal sum of products for the Boolean expression, f=(1,2,3,7,8,9,10,11,14,15), 
+using Quine-McCluskey method.
+
+ 	 	
+
+
+Firstly these minterms are represented in the binary form as shown in the table below.
+ The above binary representations are grouped into a number of sections in terms of the
+number of 1's as shown in the table below.
+
+ 	 	
+
+
+Binary representation of minterms
+
+ 	 	
+<br><br><img src="table 45.png"> <br><br>
+Minterms
+
+
+
+Group of minterms for different number of 1's
+
+ <br><br><img src="table 46.png"> <br><br>	 	
+
+
+
+
+Any two numbers in these groups which differ from each other by only one variable can be chosen
+ and combined, to get 2-cell combination, as shown in the table below.
+
+ 	 	
+
+2-Cell combinations
+
+  <br><br><img src="table 47.png"> <br><br>	 	
+
+
+
+
+From the 2-cell combinations, one variable and dash in the same position 
+can be combined to form 4-cell combinations as shown in the figure below.
+
+ 	 	
+
+
+4-Cell combinations
+
+  <br><br><img src="table 48.png"> <br><br>	 	
+
+
+	 	
+
+
+The cells (1,3) and (9,11) form the same 4-cell combination as the cells (1,9) and (3,11).
+ The order in which the cells are placed in a combination does not have any effect. 
+Thus the (1,3,9,11) combination could be written as (1,9,3,11).
+
+
+
+From above 4-cell combination table, the prime implicants table can be plotted as shown in
+ table below.
+
+
+Prime Implicants Table
+
+ <br><br><img src="table 49.png"> <br><br>
+
+
+
+The columns having only one cross mark correspond to essential prime implicants.
+ A yellow cross is used against every essential prime implicant. The prime implicants
+ sum gives the function in its minimal SOP form.
+
+ 	 	
+
+
+Y = V'X + V'W + UV' + WX + UW
+
+ 	 	
+
+</body>
+</html>

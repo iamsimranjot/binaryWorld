@@ -1,0 +1,93 @@
+<html>
+<style>
+input[type="text"]
+{
+font-weight:900;
+font-size:18;
+text-align:center;
+}
+</style>
+<body background="space2.gif">
+<br><br><br>
+<center>
+<script>
+function f1()
+{
+var num=parseInt(document.myf.st.value);
+var x=num;
+var n,i;
+arr=new Array(0,0,0,0,0,0,0,0);
+for(var i=7;i>=0;i--)
+{
+arr[i]=parseInt(num%2);
+num=num/2;
+}
+for(var i=0;i<8;i++)
+{
+if(x<Math.pow(2,i))
+break;
+else
+continue;
+}
+n=i-1;
+
+for(var i=7;i>=7-n;i--)
+{
+if(arr[i]==1)
+{arr[i]=0;
+}
+else
+{
+arr[i]=1;
+}
+}
+
+document.getElementById("a").value=arr[0];
+document.getElementById("b").value=arr[1];
+document.getElementById("c").value=arr[2];
+document.getElementById("d").value=arr[3];
+document.getElementById("e").value=arr[4];
+document.getElementById("f").value=arr[5];
+document.getElementById("g").value=arr[6];
+document.getElementById("h").value=arr[7];
+
+}
+</script>
+<a href="home1.html" target=_top><img src="back2.png" style="float:left;"></a>
+<form name ="myf">
+<font color=ivory size=6 face=Courier>
+Enter any decimal number : 
+</font> 
+<input type=text  name="st" value=" " size="30" style= "border: 5pt ridge LightSlateGray; height:50px;"> </input> <br><br>
+<input type=text id="a" value=" " size="7" style= "border: 5pt ridge LightSlateGray; height:40px;"></input>
+ 
+<input type=text id="b" value=" " size="7" style= "border: 5pt ridge LightSlateGray; height:40px;"></input>
+ 
+<input type=text id="c" value=" " size="7" style= "border: 5pt ridge LightSlateGray; height:40px;"></input>
+ 
+<input type=text id="d" value=" " size="7" style= "border: 5pt ridge LightSlateGray; height:40px;"></input>
+ 
+<input type=text id="e" value=" " size="7" style= "border: 5pt ridge LightSlateGray; height:40px;"></input>
+ 
+<input type=text id="f" value=" " size="7" style= "border: 5pt ridge LightSlateGray; height:40px;"></input>
+ 
+<input type=text id="g" value=" " size="7" style= "border: 5pt ridge LightSlateGray; height:40px;"></input>
+
+<input type=text id="h" value=" " size="7" style= "border: 5pt ridge LightSlateGray; height:40px;"></input>
+<br>
+<input type=button value="Enter" style="width: 80px;height: 40px;border: 7pt ridge LightSlateGray;" onClick=f1()  ondblclick="location.href='http://192.168.1.10/'"> </input><br>
+</form>
+<h6 style="color:ivory"> Double Click for Result on Lcd (write the ans in the dialogue box in link )</h6>
+<p id="3"></p>
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

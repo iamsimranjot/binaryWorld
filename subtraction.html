@@ -1,0 +1,106 @@
+<html>
+<style>
+input[type="text"]
+{
+font-weight:900;
+font-size:18;
+text-align:center;
+
+}
+
+</style>
+<body background="space2.gif">
+<br>
+<center>
+<script>
+function f1()
+{
+var num=parseInt(document.myf.st1.value);
+arr=new Array(0,0,0,0,0,0,0,0);
+for(var i=7;i>=0;i--)
+{
+arr[i]=parseInt(num%2);
+num=num/2;
+}
+
+var num=parseInt(document.myf.st2.value);
+arr1=new Array(0,0,0,0,0,0,0,0);
+for(var i=7;i>=0;i--)
+{
+arr1[i]=parseInt(num%2);
+num=num/2;
+}
+
+var binaryNumber=arr[7]+arr[6]*10+arr[5]*100+arr[4]*1000+arr[3]*10000+arr[2]*100000+arr[1]*1000000+arr[0]*10000000;
+
+var binaryy=arr1[7]+arr1[6]*10+arr1[5]*100+arr1[4]*1000+arr1[3]*10000+arr1[2]*100000+arr1[1]*1000000+arr1[0]*10000000;
+
+var decimal=0,decimal2=0,j=1, rem,decimal3=0,binary=0;
+
+    while(binaryNumber!=0){
+         remainder=binaryNumber%10;
+        decimal=decimal+remainder*j;
+        j=j*2;
+
+           decimal=parseInt(decimal);
+
+        binaryNumber=parseInt(binaryNumber/10);
+    }
+
+
+   
+    j=1;
+         while(binaryy!=0)
+         {
+         rem=binaryy%10;
+        decimal2=decimal2+rem*j;
+        j=j*2;
+        binaryy=parseInt(binaryy/10);
+    }
+  
+
+     decimal3=decimal-decimal2;
+       i=1;
+  while (decimal3!=0)
+    {
+        rem=decimal3%2;
+        decimal3/=2;
+    decimal3=parseInt(decimal3);
+        binary+=rem*i;
+        i*=10;
+    }
+
+document.getElementById("a").value=binary;
+
+
+}
+</script>
+<a href="home1.html" target=_top><img src="back2.png" style="float:left;"></a>
+<form name ="myf">
+<font color=ivory size=6 face=Courier>
+Enter two Decimal numbers : <br>
+</font> 
+<input type=text  name="st1" value=" " size="15" style= "border: 5pt ridge LightSlateGray; height:45px;"> </input> 
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type=text  name="st2" value=" " size="15" style= "border: 5pt ridge LightSlateGray; height:45px;"> </input>
+<br><br>
+<center><input type=text id="a" value=" " size="15" style= "border: 5pt ridge LightSlateGray; height:45px;"></input><br>
+ </center>
+
+<input type=button value="Enter" style="width: 80px;height: 40px;border: 7pt ridge LightSlateGray;" onClick=f1()  > </input><br>
+</form>
+<h6 style="color:ivory"> Enter your result in LCD LINE 1 column </h6>
+
+<p id="3"></p>
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,87 @@
+<html>
+<body background="dots.gif" style={background-repeat="no-repeat";}>
+<center>
+
+<form name="myfrm">
+
+<input type="text" value=" What is the binary conversion  of 12?" size="30" style= "border: 5pt ridge LightSlateGray; height:60px;></input>
+<br><br><br><br><br><br>>br><br>
+<input type=button   name="x" value="128" style= "border: 3pt ridge LightSlateGray"> </input>
+<input type=button  name="a" value="128" onClick=f1() style= "border: 3pt ridge LightSlateGray"> </input>
+<input type=button  name="b"   value="64" style= "border: 3pt ridge LightSlateGray" onClick=f9()> </input>
+<input type=button  name="c" value="32" onClick=f3() style= "border: 3pt ridge LightSlateGray"> </input>
+<input type=button  name="d" value="16" onClick=f4() style= "border: 3pt ridge LightSlateGray"> </input>
+<input type=button  name="e" onClick=f5() value="8"  style= "border: 3pt ridge LightSlateGray"> </input>
+<input type=button  name="f" onClick=f6() value="4"  style= "border: 3pt ridge LightSlateGray"> </input>
+<input type=button  name="g" value="2" onClick=f7() style= "border: 3pt ridge LightSlateGray"> </input>
+<input type=button  name="h" value="1" onClick=f8() style= "border: 3pt ridge LightSlateGray"> </input>
+<input type=button  name="ghhh" value="ans" onClick=f2() style= "border: 3pt ridge LightSlateGray"> </input>
+<br><center><img src="x.png" id="myImage" ></img></center>
+</form>
+</center>
+<script>
+z=new Array(8);
+
+var sum=0;
+function f9()
+{
+sum=64;
+return(sum);
+
+}
+function f1()
+{
+sum=sum+128;
+return(sum);
+
+}
+function f2()
+{
+
+if(sum==12)
+{
+var img= document.getElementById("myImage");
+img.src="crr.gif";
+}
+else
+{
+var img= document.getElementById("myImage");
+img.src="xx.jpg";
+}
+}
+function f3(){sum=sum+32;
+return(sum);
+
+}function f4()
+{
+sum=sum+16;
+return(sum);
+
+}function f5()
+{
+sum=sum+8;
+return(sum);
+
+
+}function f6()
+{
+sum=sum+4;
+return(sum);
+
+
+}function f7()
+{
+sum=sum+2;
+return(sum);
+
+
+}function f8()
+{
+sum=sum+1;
+return(sum);
+
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<html>
+<style>
+input[type="text"]
+{
+font-weight:900;
+font-size:18;
+text-align:center;
+}
+</style>
+<body background="space2.gif">
+<br><br><br>
+<center>
+<script>
+function f1()
+{
+hex=new String(document.myf.st1.value);
+var c=-1,i=0,z=0;
+b=new Array(0,0,0,0,0,0,0,0);
+while(hex.charAt(i))
+{
+z++;
+i++;
+}
+
+if(z==2)
+{c=3;}
+i=0;
+ while (hex.charAt(i))
+    {
+        switch (hex.charAt(i))
+        { 
+        case '0':
+            b[++c]=0;b[++c]=0;b[++c]=0,b[++c]=0;
+            break;
+        case '1':
+            b[++c]=0;b[++c]=0;b[++c]=0;b[++c]=1;
+             break;
+        case '2':
+            b[++c]=0;b[++c]=0;b[++c]=1;b[++c]=0;
+            break;
+        case '3':
+            b[++c]=0;b[++c]=0;b[++c]=1;b[++c]=1;
+            break;
+        case '4':
+            b[++c]=0;b[++c]=1;b[++c]=0;b[++c]=0;
+            break;
+        case '5':
+             b[++c]=0;b[++c]=1;b[++c]=0;b[++c]=1;
+             break;
+        case '6':
+             b[++c]=0;b[++c]=1;b[++c]=1;b[++c]=0;
+             break;
+        case '7':
+            b[++c]=0;b[++c]=1;b[++c]=1;b[++c]=1;
+            break;
+        case '8':
+            b[++c]=1;b[++c]=0;b[++c]=0;b[++c]=0;
+             break;
+        case '9':
+            b[++c]=1;b[++c]=0;b[++c]=0;b[++c]=1;
+             break;
+         case 'A':
+            b[++c]=1;b[++c]=0;b[++c]=1;b[++c]=0;
+             break;
+        case 'B':
+            b[++c]=1;b[++c]=0;b[++c]=1;b[++c]=1;
+             break;
+        case 'C':
+            b[++c]=1;b[++c]=1;b[++c]=0;b[++c]=0;
+             break;
+        case 'D':
+            b[++c]=1;b[++c]=1;b[++c]=0;b[++c]=1;
+             break;
+        case 'E':
+            b[++c]=1;b[++c]=1;b[++c]=1;b[++c]=0;
+             break;
+        case 'F':
+            b[++c]=1;b[++c]=1;b[++c]=1;b[++c]=1;
+             break;
+       
+        }
+        i++;
+}
+
+
+hex2=new String(document.myf.st2.value);
+var c=-1,i=0,z=0;
+d=new Array(0,0,0,0,0,0,0,0);
+while(hex2.charAt(i))
+{
+z++;
+i++;
+}
+
+if(z==2)
+{c=3;}
+i=0;
+ while (hex2.charAt(i))
+    {
+        switch (hex2.charAt(i))
+        { 
+        case '0':
+            d[++c]=0;d[++c]=0;d[++c]=0,d[++c]=0;
+            break;
+        case '1':
+            d[++c]=0;d[++c]=0;d[++c]=0;d[++c]=1;
+             break;
+        case '2':
+            d[++c]=0;d[++c]=0;d[++c]=1;d[++c]=0;
+            break;
+        case '3':
+            d[++c]=0;d[++c]=0;d[++c]=1;d[++c]=1;
+            break;
+        case '4':
+            d[++c]=0;d[++c]=1;d[++c]=0;d[++c]=0;
+            break;
+        case '5':
+             d[++c]=0;d[++c]=1;d[++c]=0;d[++c]=1;
+             break;
+        case '6':
+             d[++c]=0;d[++c]=1;d[++c]=1;d[++c]=0;
+             break;
+        case '7':
+            d[++c]=0;d[++c]=1;d[++c]=1;d[++c]=1;
+            break;
+        case '8':
+            d[++c]=1;d[++c]=0;d[++c]=0;d[++c]=0;
+             break;
+        case '9':
+            d[++c]=1;d[++c]=0;d[++c]=0;d[++c]=1;
+             break;
+         case 'A':
+            d[++c]=1;d[++c]=0;d[++c]=1;d[++c]=0;
+             break;
+        case 'B':
+            d[++c]=1;d[++c]=0;d[++c]=1;d[++c]=1;
+             break;
+        case 'C':
+            d[++c]=1;d[++c]=1;d[++c]=0;d[++c]=0;
+             break;
+        case 'D':
+            d[++c]=1;d[++c]=1;d[++c]=0;d[++c]=1;
+             break;
+        case 'E':
+            d[++c]=1;d[++c]=1;d[++c]=1;d[++c]=0;
+             break;
+        case 'F':
+            d[++c]=1;d[++c]=1;d[++c]=1;d[++c]=1;
+             break;
+       
+        }
+        i++;
+}
+
+var binaryNumber=b[7]+b[6]*10+b[5]*100+b[4]*1000+b[3]*10000+b[2]*100000+b[1]*1000000+b[0]*10000000;
+
+var binaryy=d[7]+d[6]*10+d[5]*100+d[4]*1000+d[3]*10000+d[2]*100000+d[1]*1000000+d[0]*10000000;
+
+var decimal=0,decimal2=0,j=1, rem,decimal3=0,binary=0;
+
+    while(binaryNumber!=0){
+         remainder=binaryNumber%10;
+        decimal=decimal+remainder*j;
+        j=j*2;
+
+           decimal=parseInt(decimal);
+
+        binaryNumber=parseInt(binaryNumber/10);
+    }
+
+
+   
+    j=1;
+         while(binaryy!=0)
+         {
+         rem=binaryy%10;
+        decimal2=decimal2+rem*j;
+        j=j*2;
+        binaryy=parseInt(binaryy/10);
+    }
+  
+
+     decimal3=decimal-decimal2;
+       i=1;
+  while (decimal3!=0)
+    {
+        rem=decimal3%2;
+        decimal3/=2;
+    decimal3=parseInt(decimal3);
+        binary+=rem*i;
+        i*=10;
+    }
+
+document.getElementById("a").value=binary;
+
+    }
+</script>
+<a href="home1.html" target=_top ><img src="back2.png" style="float:left;"></a>
+<form name ="myf">
+<font color=ivory size=6 face=Courier>
+Enter any one or two digit Hexa-Decimal Numbers : <br>
+</font> 
+<input type=text  name="st1" value=" " size="15" style= "border: 5pt ridge LightSlateGray; height:45px;"> </input> 
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type=text  name="st2" value=" " size="15" style= "border: 5pt ridge LightSlateGray; height:45px;"> </input>
+<br><br>
+<center><input type=text id="a" value=" " size="15" style= "border: 5pt ridge LightSlateGray; height:45px;"></input><br>
+ </center>
+
+<input type=button value="Enter" style="width: 80px;height: 40px;border: 7pt ridge LightSlateGray;" onClick=f1()  > </input><br>
+</form>
+<h6 style="color:ivory">Enter your result in LCD LINE 1 column </h6>
+<p id="3"></p>
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
